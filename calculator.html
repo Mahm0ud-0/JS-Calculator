@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./main.css">
+    <title>Calculator</title>
+</head>
+<body>
+    <h1>
+        <div>
+            Super Calculator
+        </div>
+    </h1>
+    <div class="container">
+        <div id="show-bar"></div>
+        <button id="c" class="sym" onclick="delAll()">C</button>
+
+        <button id="div" class="sym" onclick="clicked()">/</button>
+        <button id="mul" class="sym" onclick="clicked()">*</button>
+        <button id="del" class="sym" onclick="del()">⇍</button>
+        <button id="min" class="sym" onclick="clicked()">-</button>
+        <button id="plus" class="sym" onclick="clicked()">+</button>
+
+        <button id="eq"class="sym" onclick="equals()">=</button>
+        
+        <button id="dot" class="sym" onclick="clicked()">.</button>
+        <button id="nine" class="num" onclick="clicked()">9</button>
+        <button id="eight" class="num" onclick="clicked()">8</button>
+        <button id="seven" class="num" onclick="clicked()">7</button>
+        <button id="six" class="num" onclick="clicked()">6</button>
+        <button id="five" class="num" onclick="clicked()">5</button>
+        <button id="four" class="num" onclick="clicked()">4</button>
+        <button id="three" class="num" onclick="clicked()">3</button>
+        <button id="two" class="num" onclick="clicked()">2</button>
+        <button id="one" class="num" onclick="clicked()">1</button>
+        <button id="zero" class="num" onclick="clicked()">0</button>
+    </div>
+
+    <script src="funtions.js"></script>
+</body>
+</html>

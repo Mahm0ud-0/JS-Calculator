@@ -1,0 +1,219 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: rgba(0, 255, 170, 0.408);
+}
+
+h1 {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-461%);
+    color: white;
+    margin-top: 50px;
+    width: 40%;
+    margin: 50px auto;
+    padding: 20px;
+    box-shadow: 0 0 10px 4px #6200ff79;
+    overflow: hidden;
+    border-radius: 6px;
+}
+
+h1::before {
+    content: '';
+    position: absolute;
+    left: -5%;
+    width: 120%;
+    height: 300%;
+    background: linear-gradient(#00ffe1,#6200ff);
+    animation: border-spin 4s linear infinite;
+    
+}
+
+h1::after {
+    content: '';
+    position: absolute;
+    inset: 4px;
+    border-radius: 4px;
+    background: #080625ff;
+
+}
+
+h1>div {
+    position: relative;
+    color: white;
+    z-index: 1;
+}
+
+
+
+@keyframes border-spin {
+    0% {
+        transform: translateY(-14%) rotate(0deg);
+    }
+    100% {
+        transform: translateY(-14%) rotate(360deg);
+    }
+
+}
+
+.container {
+    display: grid;
+    width: 440px;
+    height: 500px;
+    padding: 30px;
+    margin: auto;
+    margin-top: 12%;
+    background-color: #eee;
+    grid-template-columns: repeat(3, 26%) 1fr;
+    grid-template-rows: repeat(6,1fr);
+    grid-template-areas:
+     "show-bar show-bar show-bar show-bar"
+     "c div mul del"
+     "seven eight nine min"
+     "four five six plus"
+     "one two three eq"
+     "zero zero dot eq";
+    gap: 1px;
+    border-radius: 20px;
+    /* border: 3px solid rgb(128, 223, 192); */
+    background-color: #174258;
+}
+
+.num,
+.sym {
+    background-color: rgb(1 1 12 / 85%);
+    background-color: #131313;
+    text-align: center;
+    color: #eee;
+    font-size: xx-large;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition-duration: .1s;
+    border-radius: 4px;
+}
+
+#show-bar {
+    overflow: scroll;
+    text-align: right;
+    padding: 20px 20px 20px;
+    margin-bottom: 10px;
+    font-size: 2em;
+    color: #eee;
+    grid-area: show-bar;
+    background-color: rgba(22, 12, 41, 0.462);
+    border-radius: 5px;
+}
+
+#show-bar::-webkit-scrollbar{
+    display: none;
+}
+
+
+
+#nine {
+    grid-area: nine;
+}
+
+.num#eight {
+    grid-area: eight;
+}
+
+#seven {
+    grid-area: seven;
+}
+
+#six {
+    grid-area: six;
+}
+
+#five {
+    grid-area: five;
+}
+
+.num#four {
+    grid-area: four;
+}
+
+.num#three {
+    grid-area: three;
+}
+
+#two {
+    grid-area: two;
+}
+
+#one {
+    grid-area: one;
+}
+
+#zero {
+    grid-area: zero;
+}
+
+#c {
+    grid-area: c;
+}
+
+#div {
+    grid-area: div;
+}
+
+#mul {
+    padding-top: 10px;
+    grid-area: mul;
+}
+
+#del {
+    grid-area: del;
+}
+
+#plus {
+    grid-area: plus;
+}
+
+#min {
+    grid-area: min;
+}
+
+#dot {
+    grid-area: dot;
+}
+
+#eq {
+    grid-area: eq;
+}
+
+
+
+.num:hover,
+.sym:hover {
+    box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.600);
+    color: #ffffffa6;
+    background-color: rgb(51, 51, 53);
+}
+
+.num:active,
+.sym:active {
+    background-color: rgb(25, 149, 108);
+    border: none;
+    color: white;
+}
+
+#eq:active {
+    background-color: rgb(37, 125, 143);
+    color: white;
+}
+
+#c:active,#del:active {
+    background-color: rgb(143, 37, 37);
+    color: white;
+}
